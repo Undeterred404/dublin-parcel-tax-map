@@ -61,12 +61,12 @@
 <body>
 <header>
   <h1>Dublin, CA — Property Tax Parcel Map</h1>
-  <p>Every property-tax parcel in Dublin, California. See assessed value and estimated property tax totals by <b>locality (Tax Rate Area)</b>, then zoom in and click any parcel — down to an individual house. Assessed values are the county's real roll figures; tax figures are estimates (see methodology below).</p>
+  <p>Every property-tax parcel in Dublin, California. See assessed value and estimated property tax totals by <b>locality (Tax Rate Area)</b>, then zoom in and click any parcel — down to an individual house. Assessed values are the county's real roll figures, and ad valorem taxes are computed with the county Tax Collector's official per-locality rates (see methodology below).</p>
   <div class="stats">
     <div class="stat"><b>24,140</b><span>Parcels in Dublin</span></div>
     <div class="stat"><b>$25.08B</b><span>Net assessed value</span></div>
     <div class="stat"><b>43</b><span>Tax Rate Areas</span></div>
-    <div class="stat"><b>~$251M – $306M</b><span>Est. annual tax (1.00%–1.22%)</span></div>
+    <div class="stat"><b>$310.6M</b><span>Ad valorem tax at official rates*</span></div>
   </div>
 </header>
 
@@ -90,23 +90,23 @@
     <p class="note">A Tax Rate Area (TRA) is the official tax locality: every parcel in a TRA shares the same composite tax rate. Click a row (or a shaded area on the map) to isolate that locality. Estimated tax excludes direct charges, special assessments and Mello-Roos — see methodology.</p>
     <div style="margin:8px 0"><button class="btn secondary" id="resetTra" style="display:none">Show all of Dublin</button></div>
     <table>
-      <thead><tr><th>TRA</th><th>Parcels</th><th>Net assessed</th><th>Est. tax*</th></tr></thead>
+      <thead><tr><th>TRA</th><th>Parcels</th><th>Net assessed</th><th>Ad valorem tax*</th></tr></thead>
       <tbody id="traRows"></tbody>
     </table>
 
     <h2>By ZIP code</h2>
     <table>
-      <thead><tr><th>ZIP</th><th>Parcels</th><th>Net assessed</th><th>Est. tax*</th></tr></thead>
+      <thead><tr><th>ZIP</th><th>Parcels</th><th>Net assessed</th><th>Ad valorem tax*</th></tr></thead>
       <tbody id="zipRows"></tbody>
     </table>
-    <p class="note">*Estimated annual tax range uses the official 1.0000% base levy and the CA Board of Equalization Alameda county-average rate of 1.220%. Actual TRA composite rates vary by locality.</p>
+    <p class="note">*Ad valorem tax uses the Alameda County Tax Collector's official composite rate for each TRA (FY2025-26, the latest published) applied to current roll values. It excludes fixed charges, special assessments and Mello-Roos, which are billed per parcel — see methodology.</p>
   </aside>
 </div>
 
 <footer>
   <h2 style="margin-top:0">Methodology &amp; caveats — please read</h2>
   <p><b>Assessed values are real.</b> Parcel boundaries, APNs, addresses, land/improvement values, exemptions and net assessed values come from the Alameda County Assessor's official parcel service (snapshot verified Nov 1, 2026: 24,140 Dublin parcels, $25,083,551,342 total net assessed value). The parcel layer on this map reads that county service live, so drill-down values stay current. Values are Proposition 13 roll values (purchase price + max 2%/yr), <i>not</i> market values.</p>
-  <p><b>Tax figures are estimates, labeled as such.</b> There is no public bulk file of actual taxes paid per parcel — the county releases bills one parcel at a time. Estimated tax = net assessed value × tax rate. The low end uses the official FY2025-26 countywide base levy of 1.0000%. The high end uses the California Board of Equalization's published Alameda County <i>average</i> rate of 1.220%. Each TRA's true composite rate (1% + voter-approved bonds for that exact area) sits in the county's "51-427 Composite Tax Rates" report; that PDF is hosted behind a county SharePoint login wall and could not be retrieved programmatically — when those 43 rates are loaded, this map will show exact per-TRA estimates instead of the range.</p>
+  <p><b>Ad valorem taxes use the county's official rates.</b> The Alameda County Tax Collector publishes the full tax-rate table for every Tax Rate Area (fund-by-fund) as an open data service; this map loads Dublin's 43 TRAs from it (FY2025-26, the latest published) and computes ad valorem tax as net assessed value × the TRA's exact composite rate. The table was validated against a real county bill: for TRA 26-023 its components sum to 1.2385%, matching that bill's composite rate to the fourth decimal. One fringe TRA (75-017, a single parcel on Dublin Canyon Rd) is not in the published table, so that parcel still shows the older labeled range (1.0000% base levy to the 1.220% county average). Rates are FY2025-26 applied to current roll values, so a parcel's figure can differ slightly from its newest bill if its TRA rate changed year over year.</p>
   <p><b>Estimates exclude</b> fixed direct charges, special assessments, and Mello-Roos community-facilities-district charges, which are billed per parcel and can add thousands of dollars a year in newer east Dublin developments. 2,273 Dublin parcels (9.4%) carry a $0 net value — mostly common areas and exempt parcels — and pay no ad valorem tax. 135 APNs appear on more than one parcel row (condos/multi-unit), so drill-down is keyed to the individual parcel, not the APN alone.</p>
   <p><b>Actual bills, one click from every parcel.</b> Selecting a parcel now shows a "View actual tax bill at the county" button. The Alameda County Treasurer-Tax Collector portal does not publish direct links to individual bills — verified Nov 1, 2026: its bill page address carries no parcel identifier (the portal selects the bill from your search session — even the older-style bill addresses with a tracer number in them are ignored, verified the same day) and its search page ignores an APN passed in the web address — so the button copies the home's street address and opens the county's official search — which opens on its Address tab, so you paste, pick the suggestion for that home, and use "View Bill" on the summary (parcels with no street address on file, like vacant land and common areas, copy their APN for the Parcel Number tab instead). The gap this matters for is real: one Tassajara Rd parcel (APN 985-133-5, net assessed $701,148) shows an estimate of $7,011–$8,554 on this map, but its actual 2026-27 county bill is $16,342.56 — a 1.2331% composite rate plus $7,696.72 in fixed charges, mostly CFD No. 2024-1 (Mello-Roos) charges that no assessed-value estimate can see.</p>
   <p>Sources: <a href="https://services5.arcgis.com/ROBnTHSNjoZ2Wm1P/arcgis/rest/services/Parcels/FeatureServer/0" target="_blank" rel="noopener">Alameda County Parcels (ArcGIS FeatureServer)</a> · <a href="https://propertytax.alamedacountyca.gov/search" target="_blank" rel="noopener">Treasurer-Tax Collector — official property tax search &amp; bills</a> · <a href="https://auditor.alamedacountyca.gov/tax-property-reports/" target="_blank" rel="noopener">Auditor-Controller Property Tax Reports</a> · <a href="https://github.com/Undeterred404/dublin-parcel-tax-map" target="_blank" rel="noopener">Source code &amp; data notes on GitHub</a>. Map data © OpenStreetMap contributors; imagery © Esri.</p>
@@ -121,6 +121,11 @@ const fmt$ = n => n == null ? "—" : "$" + Math.round(n).toLocaleString("en-US"
 const fmtN = n => n == null ? "—" : Math.round(n).toLocaleString("en-US");
 const fullTra = p => (p.TRAPrimary || "?") + "-" + (p.TRASecondary || "???");
 const estRange = v => v ? fmt$(v * BASE_RATE) + " – " + fmt$(v * AVG_RATE) : "—";
+let TAXRATES = {}, TAXSUM = null;
+const fmtPct = r => (r * 100).toFixed(4) + "%";
+const traRate = tra => (TAXRATES[tra] || {}).rate || null;
+const advTax = (v, tra) => { const r = traRate(tra); return (v && r) ? v * r : null; };
+const taxLine = (v, tra) => { if (!Object.keys(TAXRATES).length) return estRange(v); const a = advTax(v, tra); return a != null ? fmt$(a) + " at " + fmtPct(traRate(tra)) : estRange(v) + " (rate n/a)"; };
 
 const map = L.map("map").setView([37.71, -121.93], 12);
 const streets = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom: 19, attribution: "© OpenStreetMap contributors"}).addTo(map);
@@ -137,13 +142,17 @@ function traColor(v){ // by net assessed value
   return "#d9d9d9";
 }
 let traLayer = null, traData = null, selectedTra = null;
+Promise.all([
+  fetch("data/tra-tax-rates.json").then(r => r.json()).then(d => { TAXRATES = d.tras || {}; }),
+  fetch("data/tax-summary.json").then(r => r.json()).then(d => { TAXSUM = d; })
+]).catch(() => {}).then(() => buildZipTable());
 fetch("data/tra-boundaries.geojson").then(r => r.json()).then(gj => {
   traData = gj;
   traLayer = L.geoJSON(gj, {
     style: f => ({color:"#7a3f00", weight:1, fillColor: traColor(f.properties.sum_TotalNetValue), fillOpacity:.5}),
     onEachFeature: (f, layer) => {
       const p = f.properties;
-      layer.bindTooltip(`<b>TRA ${p.tra}</b><br>${fmtN(p.parcel_count)} parcels<br>Net assessed ${fmt$(p.sum_TotalNetValue)}<br>Est. tax ${estRange(p.sum_TotalNetValue)}`, {sticky:true});
+      layer.bindTooltip(`<b>TRA ${p.tra}</b><br>${fmtN(p.parcel_count)} parcels<br>Net assessed ${fmt$(p.sum_TotalNetValue)}<br>Ad valorem tax ${taxLine(p.sum_TotalNetValue, p.tra)}`, {sticky:true});
       layer.on("click", () => { if (map.getZoom() < 13) selectTra(p.tra, false); });
     }
   }).addTo(map);
@@ -159,17 +168,21 @@ function buildTraTable(rows){
       <td>${p.tra}<div class="bar" style="width:${Math.max(3, 100*p.sum_TotalNetValue/max)}%"></div></td>
       <td>${fmtN(p.parcel_count)}</td>
       <td>${fmt$(p.sum_TotalNetValue)}</td>
-      <td>${estRange(p.sum_TotalNetValue)}</td>
+      <td>${taxLine(p.sum_TotalNetValue, p.tra)}</td>
     </tr>`).join("");
   tb.querySelectorAll("tr").forEach(tr => tr.addEventListener("click", () => selectTra(tr.dataset.tra, true)));
 }
 
 // ---------- ZIP table ----------
-fetch("data/locality-stats.json").then(r => r.json()).then(d => {
-  const rows = Object.entries(d.by_SitusZip).sort((a,b) => b[1].sum_TotalNetValue - a[1].sum_TotalNetValue);
-  document.getElementById("zipRows").innerHTML = rows.map(([zip, s]) => `
-    <tr style="cursor:default"><td>${zip}</td><td>${fmtN(s.parcel_count)}</td><td>${fmt$(s.sum_TotalNetValue)}</td><td>${estRange(s.sum_TotalNetValue)}</td></tr>`).join("");
-}).catch(()=>{});
+function buildZipTable(){
+  fetch("data/locality-stats.json").then(r => r.json()).then(d => {
+    const rows = Object.entries(d.by_SitusZip).sort((a,b) => b[1].sum_TotalNetValue - a[1].sum_TotalNetValue);
+    document.getElementById("zipRows").innerHTML = rows.map(([zip, s]) => {
+      const adv = TAXSUM && TAXSUM.zip_advalorem ? TAXSUM.zip_advalorem[zip] : null;
+      return `<tr style="cursor:default"><td>${zip}</td><td>${fmtN(s.parcel_count)}</td><td>${fmt$(s.sum_TotalNetValue)}</td><td>${adv != null ? fmt$(adv) : estRange(s.sum_TotalNetValue)}</td></tr>`;
+    }).join("");
+  }).catch(()=>{});
+}
 
 // ---------- Parcel layer (live from the county) ----------
 function parcelColor(v){
@@ -215,10 +228,10 @@ async function parcelAt(latlng){
     const addr = (p.SitusAddress || "").trim() || ("APN " + p.APN);
     L.popup({maxWidth: 320}).setLatLng(latlng).setContent(
       `<div style="font-size:13.5px;line-height:1.5"><b>${addr}</b><br>` +
-      `<span style="font-size:16px"><b>Est. annual property tax: ${estRange(p.TotalNetValue)}</b></span><br>` +
+      `<span style="font-size:16px"><b>Ad valorem tax: ${taxLine(p.TotalNetValue, fullTra(p))}</b></span><br>` +
       `Net assessed value ${fmt$(p.TotalNetValue)} · APN ${p.APN} · TRA ${fullTra(p)}<br>` +
       (() => { const k = billKey(p); return `<a href="${COUNTY_SEARCH}" target="_blank" rel="noopener" onclick="copyText('${k.value.replace(/'/g, "\\'")}')" style="font-weight:700">View actual county tax bill ↗</a> <span style="color:#5b6b7c">(county search — ${k.kind === "address" ? "home address" : "APN"} copied for you)</span><br>`; })() +
-      `<span style="color:#5b6b7c">Full breakdown in the panel ${window.innerWidth > 900 ? "on the right" : "below the map"}. Estimate excludes direct charges &amp; Mello-Roos.</span></div>`
+      `<span style="color:#5b6b7c">Full breakdown in the panel ${window.innerWidth > 900 ? "on the right" : "below the map"}. Ad valorem only — excludes direct charges &amp; Mello-Roos.</span></div>`
     ).openOn(map);
   }catch(e){
     L.popup().setLatLng(latlng).setContent("Parcel lookup failed: " + e.message).openOn(map);
@@ -268,6 +281,17 @@ function billKey(p){
   if (/^\d+\s/.test(addr)) return {kind:"address", value: addr + (p.SitusUnit ? " Unit " + p.SitusUnit : "")};
   return {kind:"apn", value: p.APN || ""};
 }
+function breakdownHtml(p){
+  const tra = fullTra(p);
+  const info = TAXRATES[tra];
+  if (!info) return `<p class="note" style="margin:8px 0 0">The county's published rate table has no entry for TRA ${tra}, so this parcel shows the older estimate range (1.0000%–1.220%).</p>`;
+  const v = p.TotalNetValue || 0;
+  const rows = info.components.map(c => `<tr><td>${c.name}</td><td>${fmtPct(c.rate)}</td><td>${fmt$(v * c.rate)}</td></tr>`).join("");
+  return `<h4 style="margin:10px 0 4px;font-size:13px">Tax-rate breakdown — TRA ${tra} (official, FY2025-26)</h4>
+    <table><tr><td style="color:#5b6b7c">Taxing agency</td><td style="color:#5b6b7c;text-align:right">Rate</td><td style="color:#5b6b7c;text-align:right">This parcel</td></tr>
+    ${rows}
+    <tr><td><b>Total ad valorem</b></td><td><b>${fmtPct(info.rate)}</b></td><td><b>${fmt$(v * info.rate)}</b></td></tr></table>`;
+}
 function billBoxHtml(p){
   const k = billKey(p);
   const apn = p.APN || "—";
@@ -314,11 +338,12 @@ function showDetail(p){
       <tr><td>Improvements value</td><td>${fmt$(p.Imps)}</td></tr>
       <tr><td>Exemptions (homeowner/other)</td><td>${ex ? "−" + fmt$(ex) : "—"}</td></tr>
       <tr><td>Net assessed value</td><td>${fmt$(p.TotalNetValue)}</td></tr>
-      <tr><td>Est. annual tax (range)</td><td>${estRange(p.TotalNetValue)}</td></tr>
+      <tr><td>Ad valorem tax (official TRA rate)</td><td>${taxLine(p.TotalNetValue, tra)}</td></tr>
       <tr><td>County use code</td><td>${p.UseCode || "—"}</td></tr>
     </table>
+    ${breakdownHtml(p)}
     ${billBoxHtml(p)}
-    <p class="note" style="margin:8px 0 0">Estimated tax = net assessed value × 1.0000% (official base levy) to × 1.220% (county-average rate). Excludes direct charges, special assessments and Mello-Roos, which can be significant in east Dublin — use the county bill above for the exact amount.</p>`;
+    <p class="note" style="margin:8px 0 0">Ad valorem tax = net assessed value × this TRA's exact composite rate from the county Tax Collector's official rate table (FY2025-26, the latest published). It excludes fixed direct charges, special assessments and Mello-Roos, which can be significant in east Dublin — the county bill below includes those.</p>`;
   document.getElementById("detailBox").style.display = "block";
 }
 
@@ -365,7 +390,7 @@ async function doSearch(){
     feats.forEach(f => {
       const p = f.properties;
       const li = document.createElement("li");
-      li.innerHTML = `<b>${(p.SitusAddress || "").trim()}</b> — APN ${p.APN}<br><small>Net assessed ${fmt$(p.TotalNetValue)} · TRA ${fullTra(p)} · Est. tax ${estRange(p.TotalNetValue)}</small>`;
+      li.innerHTML = `<b>${(p.SitusAddress || "").trim()}</b> — APN ${p.APN}<br><small>Net assessed ${fmt$(p.TotalNetValue)} · TRA ${fullTra(p)} · Ad valorem tax ${taxLine(p.TotalNetValue, fullTra(p))}</small>`;
       li.addEventListener("click", () => {
         showDetail(p);
         const g = L.geoJSON(f);

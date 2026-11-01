@@ -1,0 +1,1391 @@
+{
+ "fy": "2025-26",
+ "tras": {
+  "26-000": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-001": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-002": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-003": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-004": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-005": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-006": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-007": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-008": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-010": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-011": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-012": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-013": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-014": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-015": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-016": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-017": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-018": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-019": {
+   "rate": 0.01164,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "CASTRO VLY UNIF SCH BONDS",
+     "rate": 0.000816
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "HAYWARD AREA REC & PARK",
+     "rate": 0.000188
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-020": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-021": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-022": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-023": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-025": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-026": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-027": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-028": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-029": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-031": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-032": {
+   "rate": 0.012374,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    }
+   ]
+  },
+  "26-033": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-034": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-035": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-036": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-037": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-038": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-039": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-040": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-041": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-042": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "26-043": {
+   "rate": 0.012385,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  },
+  "55-001": {
+   "rate": 0.012545,
+   "components": [
+    {
+     "name": "COUNTYWIDE TAX",
+     "rate": 0.01
+    },
+    {
+     "name": "DUBLIN JT UNIF SCH BDS 1A & B",
+     "rate": 0.001524
+    },
+    {
+     "name": "CHABOT-LAS POSITAS COLL BONDS",
+     "rate": 0.000389
+    },
+    {
+     "name": "FLD ZN 7 STATE WTR",
+     "rate": 0.000225
+    },
+    {
+     "name": "ACOFD GO BOND",
+     "rate": 0.00016
+    },
+    {
+     "name": "BAY AREA RAPID TRANSIT",
+     "rate": 0.000152
+    },
+    {
+     "name": "COUNTY GO BOND",
+     "rate": 8.4e-05
+    },
+    {
+     "name": "EAST BAY REGIONAL PARK 1",
+     "rate": 1.1e-05
+    }
+   ]
+  }
+ }
+}
