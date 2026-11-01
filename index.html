@@ -72,7 +72,7 @@
       <input id="q" type="text" placeholder="Street address or APN, e.g. 7420 Amador Valley Blvd or 941-…">
       <button id="go">Search</button>
     </div>
-    <div id="status">Parcels appear when you zoom in to street level. Click any parcel for its details.</div>
+    <div id="status">Zoom in to street level, then tap or click any house lot — you'll get that home's assessed value and estimated property tax. You can also search by address or APN above.</div>
     <ul id="results"></ul>
 
     <div id="detailBox" style="display:none">
@@ -137,7 +137,7 @@ fetch("data/tra-boundaries.geojson").then(r => r.json()).then(gj => {
     onEachFeature: (f, layer) => {
       const p = f.properties;
       layer.bindTooltip(`<b>TRA ${p.tra}</b><br>${fmtN(p.parcel_count)} parcels<br>Net assessed ${fmt$(p.sum_TotalNetValue)}<br>Est. tax ${estRange(p.sum_TotalNetValue)}`, {sticky:true});
-      layer.on("click", () => selectTra(p.tra, false));
+      layer.on("click", () => { if (map.getZoom() < 13) selectTra(p.tra, false); });
     }
   }).addTo(map);
   buildTraTable(gj.features.map(f => f.properties));
@@ -176,14 +176,47 @@ function parcelColor(v){
 const parcels = L.esri.featureLayer({
   url: SERVICE,
   where: "SitusCity = 'DUBLIN'",
-  minZoom: 14, maxZoom: 19,
+  minZoom: 13, maxZoom: 19,
   simplifyFactor: 0.5, precision: 5,
   fields: ["OBJECTID","APN","TRAPrimary","TRASecondary","SitusAddress","SitusUnit","SitusZip","Land","Imps","HOEX","OTEX","TotalNetValue","UseCode"],
   style: f => ({color:"#333", weight:.5, fillColor: parcelColor(f.properties.TotalNetValue), fillOpacity:.65})
 }).addTo(map);
 
 parcels.on("click", e => { if (e.layer && e.layer.feature) showDetail(e.layer.feature.properties); });
-parcels.on("load", () => { document.getElementById("status").textContent = "Showing live county parcels for the current view. Click any parcel for its details."; });
+parcels.on("load", () => { document.getElementById("status").textContent = "Showing live county parcels for the current view. Click or tap any parcel — or any spot on the map — to see that home's estimated tax."; });
+
+// ---------- Click/tap anywhere: look up the parcel under that point ----------
+// This does not depend on the rendered parcel outlines: it asks the county
+// service which Dublin parcel contains the clicked point, highlights it, and
+// pops up its estimated tax. Works on touch devices too.
+let highlight = null;
+async function parcelAt(latlng){
+  const where = encodeURIComponent("SitusCity = 'DUBLIN'");
+  const geom = encodeURIComponent(`${latlng.lng},${latlng.lat}`);
+  const url = `${SERVICE}/query?where=${where}&geometry=${geom}&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=*&returnGeometry=true&outSR=4326&resultRecordCount=1&f=geojson`;
+  try{
+    const gj = await (await fetch(url)).json();
+    const f = (gj.features || [])[0];
+    if (!f) {
+      L.popup().setLatLng(latlng).setContent("No Dublin parcel at that exact spot (street, park or open space). Try clicking on a house lot.").openOn(map);
+      return;
+    }
+    const p = f.properties;
+    if (highlight) { map.removeLayer(highlight); }
+    highlight = L.geoJSON(f, {style:{color:"#b30000", weight:3, fillColor:"#ffcc00", fillOpacity:.35}}).addTo(map);
+    showDetail(p);
+    const addr = (p.SitusAddress || "").trim() || ("APN " + p.APN);
+    L.popup({maxWidth: 320}).setLatLng(latlng).setContent(
+      `<div style="font-size:13.5px;line-height:1.5"><b>${addr}</b><br>` +
+      `<span style="font-size:16px"><b>Est. annual property tax: ${estRange(p.TotalNetValue)}</b></span><br>` +
+      `Net assessed value ${fmt$(p.TotalNetValue)} · APN ${p.APN} · TRA ${fullTra(p)}<br>` +
+      `<span style="color:#5b6b7c">Full breakdown in the panel ${window.innerWidth > 900 ? "on the right" : "below the map"}. Estimate excludes direct charges &amp; Mello-Roos.</span></div>`
+    ).openOn(map);
+  }catch(e){
+    L.popup().setLatLng(latlng).setContent("Parcel lookup failed: " + e.message).openOn(map);
+  }
+}
+map.on("click", e => { if (map.getZoom() >= 13) parcelAt(e.latlng); });
 
 const layerCtl = L.control.layers({"Streets": streets, "Satellite": imagery}, {}, {collapsed:true}).addTo(map);
 // move base switch: Leaflet treats first two as base layers only if added via control before; ensure one active
