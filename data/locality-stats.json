@@ -1,0 +1,1230 @@
+{
+ "source": "Alameda County Parcels FeatureServer layer 0, SitusCity='DUBLIN', downloaded 2026-11-01",
+ "citywide": {
+  "parcel_count": 24140,
+  "sum_Land": 8059323409.0,
+  "sum_Imps": 17476641308.0,
+  "sum_TotalNetValue": 25083551342.0,
+  "avg_TotalNetValue": 1039086.63
+ },
+ "by_TRAPrimary": {
+  "26": {
+   "parcel_count": 24127,
+   "sum_Land": 8055537319.0,
+   "sum_Imps": 17476381062.0,
+   "sum_TotalNetValue": 25079451586.0,
+   "avg_TotalNetValue": 1039476.59
+  },
+  "55": {
+   "parcel_count": 12,
+   "sum_Land": 2770992.0,
+   "sum_Imps": 115232.0,
+   "sum_TotalNetValue": 2939644.0,
+   "avg_TotalNetValue": 244970.33
+  },
+  "75": {
+   "parcel_count": 1,
+   "sum_Land": 1015098.0,
+   "sum_Imps": 145014.0,
+   "sum_TotalNetValue": 1160112.0,
+   "avg_TotalNetValue": 1160112.0
+  }
+ },
+ "by_full_TRA_TRAPrimary_minus_TRASecondary": {
+  "26-001": {
+   "parcel_count": 7402,
+   "sum_Land": 1867190261.0,
+   "sum_Imps": 4072890132.0,
+   "sum_TotalNetValue": 5892547412.0,
+   "avg_TotalNetValue": 796075.04
+  },
+  "26-026": {
+   "parcel_count": 3900,
+   "sum_Land": 1097796823.0,
+   "sum_Imps": 2649209511.0,
+   "sum_TotalNetValue": 3466654994.0,
+   "avg_TotalNetValue": 888885.9
+  },
+  "26-015": {
+   "parcel_count": 2658,
+   "sum_Land": 802570812.0,
+   "sum_Imps": 2141673297.0,
+   "sum_TotalNetValue": 2922853737.0,
+   "avg_TotalNetValue": 1099643.99
+  },
+  "26-021": {
+   "parcel_count": 734,
+   "sum_Land": 528155418.0,
+   "sum_Imps": 1084729999.0,
+   "sum_TotalNetValue": 1659745676.0,
+   "avg_TotalNetValue": 2261233.89
+  },
+  "26-025": {
+   "parcel_count": 1052,
+   "sum_Land": 385091676.0,
+   "sum_Imps": 887328845.0,
+   "sum_TotalNetValue": 1267744379.0,
+   "avg_TotalNetValue": 1205080.21
+  },
+  "26-034": {
+   "parcel_count": 928,
+   "sum_Land": 441216100.0,
+   "sum_Imps": 719026099.0,
+   "sum_TotalNetValue": 1156960528.0,
+   "avg_TotalNetValue": 1246724.71
+  },
+  "26-038": {
+   "parcel_count": 917,
+   "sum_Land": 332837524.0,
+   "sum_Imps": 759263630.0,
+   "sum_TotalNetValue": 1087047387.0,
+   "avg_TotalNetValue": 1185438.81
+  },
+  "26-033": {
+   "parcel_count": 892,
+   "sum_Land": 323860077.0,
+   "sum_Imps": 748589907.0,
+   "sum_TotalNetValue": 1068128113.0,
+   "avg_TotalNetValue": 1197453.04
+  },
+  "26-032": {
+   "parcel_count": 831,
+   "sum_Land": 499753775.0,
+   "sum_Imps": 447644064.0,
+   "sum_TotalNetValue": 946406639.0,
+   "avg_TotalNetValue": 1138876.82
+  },
+  "26-023": {
+   "parcel_count": 724,
+   "sum_Land": 374239238.0,
+   "sum_Imps": 499988595.0,
+   "sum_TotalNetValue": 872526522.0,
+   "avg_TotalNetValue": 1205147.13
+  },
+  "26-042": {
+   "parcel_count": 393,
+   "sum_Land": 244693822.0,
+   "sum_Imps": 571907794.0,
+   "sum_TotalNetValue": 815210016.0,
+   "avg_TotalNetValue": 2074325.74
+  },
+  "26-013": {
+   "parcel_count": 497,
+   "sum_Land": 188105679.0,
+   "sum_Imps": 489553611.0,
+   "sum_TotalNetValue": 635581039.0,
+   "avg_TotalNetValue": 1278835.09
+  },
+  "26-000": {
+   "parcel_count": 91,
+   "sum_Land": 141278828.0,
+   "sum_Imps": 485693299.0,
+   "sum_TotalNetValue": 617132675.0,
+   "avg_TotalNetValue": 6781677.75
+  },
+  "26-027": {
+   "parcel_count": 438,
+   "sum_Land": 185444008.0,
+   "sum_Imps": 406219104.0,
+   "sum_TotalNetValue": 589599441.0,
+   "avg_TotalNetValue": 1346117.45
+  },
+  "26-022": {
+   "parcel_count": 463,
+   "sum_Land": 121321909.0,
+   "sum_Imps": 284304222.0,
+   "sum_TotalNetValue": 403988401.0,
+   "avg_TotalNetValue": 872545.14
+  },
+  "26-036": {
+   "parcel_count": 318,
+   "sum_Land": 95903437.0,
+   "sum_Imps": 222144122.0,
+   "sum_TotalNetValue": 316893959.0,
+   "avg_TotalNetValue": 996521.88
+  },
+  "26-018": {
+   "parcel_count": 197,
+   "sum_Land": 71350458.0,
+   "sum_Imps": 166333102.0,
+   "sum_TotalNetValue": 236780560.0,
+   "avg_TotalNetValue": 1201931.78
+  },
+  "26-020": {
+   "parcel_count": 311,
+   "sum_Land": 65373466.0,
+   "sum_Imps": 137307178.0,
+   "sum_TotalNetValue": 199015741.0,
+   "avg_TotalNetValue": 639922.0
+  },
+  "26-008": {
+   "parcel_count": 278,
+   "sum_Land": 65640085.0,
+   "sum_Imps": 154729620.0,
+   "sum_TotalNetValue": 181098683.0,
+   "avg_TotalNetValue": 651434.11
+  },
+  "26-006": {
+   "parcel_count": 436,
+   "sum_Land": 39680301.0,
+   "sum_Imps": 107892457.0,
+   "sum_TotalNetValue": 147474758.0,
+   "avg_TotalNetValue": 338244.86
+  },
+  "26-040": {
+   "parcel_count": 113,
+   "sum_Land": 41426044.0,
+   "sum_Imps": 97008562.0,
+   "sum_TotalNetValue": 137967006.0,
+   "avg_TotalNetValue": 1220946.96
+  },
+  "26-010": {
+   "parcel_count": 91,
+   "sum_Land": 32241256.0,
+   "sum_Imps": 70327349.0,
+   "sum_TotalNetValue": 102141605.0,
+   "avg_TotalNetValue": 1122435.22
+  },
+  "26-016": {
+   "parcel_count": 127,
+   "sum_Land": 25295513.0,
+   "sum_Imps": 58265585.0,
+   "sum_TotalNetValue": 83057098.0,
+   "avg_TotalNetValue": 653992.9
+  },
+  "26-004": {
+   "parcel_count": 128,
+   "sum_Land": 17240246.0,
+   "sum_Imps": 40089838.0,
+   "sum_TotalNetValue": 56966084.0,
+   "avg_TotalNetValue": 445047.53
+  },
+  "26-039": {
+   "parcel_count": 32,
+   "sum_Land": 13990625.0,
+   "sum_Imps": 32794548.0,
+   "sum_TotalNetValue": 46687173.0,
+   "avg_TotalNetValue": 1458974.16
+  },
+  "26-041": {
+   "parcel_count": 24,
+   "sum_Land": 11742228.0,
+   "sum_Imps": 24646074.0,
+   "sum_TotalNetValue": 36304302.0,
+   "avg_TotalNetValue": 1512679.25
+  },
+  "26-007": {
+   "parcel_count": 38,
+   "sum_Land": 10091509.0,
+   "sum_Imps": 24054498.0,
+   "sum_TotalNetValue": 33797336.0,
+   "avg_TotalNetValue": 889403.58
+  },
+  "26-011": {
+   "parcel_count": 32,
+   "sum_Land": 9518634.0,
+   "sum_Imps": 20921102.0,
+   "sum_TotalNetValue": 30292736.0,
+   "avg_TotalNetValue": 946648.0
+  },
+  "26-031": {
+   "parcel_count": 5,
+   "sum_Land": 4506210.0,
+   "sum_Imps": 21004521.0,
+   "sum_TotalNetValue": 25510731.0,
+   "avg_TotalNetValue": 5102146.2
+  },
+  "26-028": {
+   "parcel_count": 21,
+   "sum_Land": 3836401.0,
+   "sum_Imps": 8873331.0,
+   "sum_TotalNetValue": 12688732.0,
+   "avg_TotalNetValue": 604225.33
+  },
+  "26-012": {
+   "parcel_count": 2,
+   "sum_Land": 5070073.0,
+   "sum_Imps": 4803502.0,
+   "sum_TotalNetValue": 9873575.0,
+   "avg_TotalNetValue": 4936787.5
+  },
+  "26-005": {
+   "parcel_count": 12,
+   "sum_Land": 2682064.0,
+   "sum_Imps": 6208752.0,
+   "sum_TotalNetValue": 8862816.0,
+   "avg_TotalNetValue": 738568.0
+  },
+  "26-017": {
+   "parcel_count": 16,
+   "sum_Land": 2446422.0,
+   "sum_Imps": 5725190.0,
+   "sum_TotalNetValue": 8115612.0,
+   "avg_TotalNetValue": 507225.75
+  },
+  "55-001": {
+   "parcel_count": 12,
+   "sum_Land": 2770992.0,
+   "sum_Imps": 115232.0,
+   "sum_TotalNetValue": 2939644.0,
+   "avg_TotalNetValue": 244970.33
+  },
+  "26-043": {
+   "parcel_count": 2,
+   "sum_Land": 2077684.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 2077684.0,
+   "avg_TotalNetValue": 1038842.0
+  },
+  "26-037": {
+   "parcel_count": 1,
+   "sum_Land": 1224000.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 1224000.0,
+   "avg_TotalNetValue": 1224000.0
+  },
+  "75-017": {
+   "parcel_count": 1,
+   "sum_Land": 1015098.0,
+   "sum_Imps": 145014.0,
+   "sum_TotalNetValue": 1160112.0,
+   "avg_TotalNetValue": 1160112.0
+  },
+  "26-002": {
+   "parcel_count": 2,
+   "sum_Land": 644713.0,
+   "sum_Imps": 25229622.0,
+   "sum_TotalNetValue": 494436.0,
+   "avg_TotalNetValue": 247218.0
+  },
+  "26-019": {
+   "parcel_count": 1,
+   "sum_Land": 0.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 0.0,
+   "avg_TotalNetValue": 0.0
+  },
+  "26-003": {
+   "parcel_count": 3,
+   "sum_Land": 0.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 0.0,
+   "avg_TotalNetValue": 0.0
+  },
+  "26-029": {
+   "parcel_count": 13,
+   "sum_Land": 0.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 0.0,
+   "avg_TotalNetValue": 0.0
+  },
+  "26-014": {
+   "parcel_count": 3,
+   "sum_Land": 0.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 0.0,
+   "avg_TotalNetValue": 0.0
+  },
+  "26-035": {
+   "parcel_count": 1,
+   "sum_Land": 0.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 0.0,
+   "avg_TotalNetValue": 0.0
+  }
+ },
+ "by_SitusZip": {
+  "94568": {
+   "parcel_count": 24105,
+   "sum_Land": 8029375522.0,
+   "sum_Imps": 17476641308.0,
+   "sum_TotalNetValue": 25053603455.0,
+   "avg_TotalNetValue": 1039352.97
+  },
+  "94588": {
+   "parcel_count": 35,
+   "sum_Land": 29947887.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 29947887.0,
+   "avg_TotalNetValue": 855653.91
+  }
+ },
+ "by_UseCode": {
+  "1800": {
+   "parcel_count": 5423,
+   "sum_Land": 2250100606.0,
+   "sum_Imps": 5197989191.0,
+   "sum_TotalNetValue": 7422840675.0,
+   "avg_TotalNetValue": 1368770.18
+  },
+  "1100": {
+   "parcel_count": 7551,
+   "sum_Land": 2148735815.0,
+   "sum_Imps": 4942481468.0,
+   "sum_TotalNetValue": 7052718605.0,
+   "avg_TotalNetValue": 934011.2
+  },
+  "7305": {
+   "parcel_count": 4624,
+   "sum_Land": 1186679121.0,
+   "sum_Imps": 2822531331.0,
+   "sum_TotalNetValue": 3993714755.0,
+   "avg_TotalNetValue": 863692.64
+  },
+  "7700": {
+   "parcel_count": 19,
+   "sum_Land": 218772206.0,
+   "sum_Imps": 1135696167.0,
+   "sum_TotalNetValue": 1367227579.0,
+   "avg_TotalNetValue": 71959346.26
+  },
+  "7300": {
+   "parcel_count": 2375,
+   "sum_Land": 272721882.0,
+   "sum_Imps": 662704721.0,
+   "sum_TotalNetValue": 932405403.0,
+   "avg_TotalNetValue": 392591.75
+  },
+  "0800": {
+   "parcel_count": 659,
+   "sum_Land": 415260675.0,
+   "sum_Imps": 50392136.0,
+   "sum_TotalNetValue": 465645811.0,
+   "avg_TotalNetValue": 706594.55
+  },
+  "9400": {
+   "parcel_count": 36,
+   "sum_Land": 101275885.0,
+   "sum_Imps": 283276188.0,
+   "sum_TotalNetValue": 429424697.0,
+   "avg_TotalNetValue": 11928463.81
+  },
+  "3700": {
+   "parcel_count": 42,
+   "sum_Land": 170459464.0,
+   "sum_Imps": 252621166.0,
+   "sum_TotalNetValue": 423080630.0,
+   "avg_TotalNetValue": 10073348.33
+  },
+  "3000": {
+   "parcel_count": 27,
+   "sum_Land": 316755435.0,
+   "sum_Imps": 10899649.0,
+   "sum_TotalNetValue": 312071232.0,
+   "avg_TotalNetValue": 11558193.78
+  },
+  "3701": {
+   "parcel_count": 19,
+   "sum_Land": 107342155.0,
+   "sum_Imps": 162091745.0,
+   "sum_TotalNetValue": 269433900.0,
+   "avg_TotalNetValue": 14180731.58
+  },
+  "8200": {
+   "parcel_count": 17,
+   "sum_Land": 82897881.0,
+   "sum_Imps": 89117114.0,
+   "sum_TotalNetValue": 172967162.0,
+   "avg_TotalNetValue": 10174538.94
+  },
+  "4200": {
+   "parcel_count": 17,
+   "sum_Land": 61104745.0,
+   "sum_Imps": 105693756.0,
+   "sum_TotalNetValue": 166798501.0,
+   "avg_TotalNetValue": 9811676.53
+  },
+  "3100": {
+   "parcel_count": 40,
+   "sum_Land": 50813726.0,
+   "sum_Imps": 100964584.0,
+   "sum_TotalNetValue": 151778310.0,
+   "avg_TotalNetValue": 3794457.75
+  },
+  "1500": {
+   "parcel_count": 217,
+   "sum_Land": 45901092.0,
+   "sum_Imps": 106093171.0,
+   "sum_TotalNetValue": 151133263.0,
+   "avg_TotalNetValue": 696466.65
+  },
+  "3703": {
+   "parcel_count": 18,
+   "sum_Land": 47835245.0,
+   "sum_Imps": 102150975.0,
+   "sum_TotalNetValue": 149986220.0,
+   "avg_TotalNetValue": 8332567.78
+  },
+  "1850": {
+   "parcel_count": 120,
+   "sum_Land": 45369510.0,
+   "sum_Imps": 104443534.0,
+   "sum_TotalNetValue": 149408444.0,
+   "avg_TotalNetValue": 1245070.37
+  },
+  "9500": {
+   "parcel_count": 2,
+   "sum_Land": 31644887.0,
+   "sum_Imps": 86289998.0,
+   "sum_TotalNetValue": 119168975.0,
+   "avg_TotalNetValue": 59584487.5
+  },
+  "4205": {
+   "parcel_count": 1,
+   "sum_Land": 14028969.0,
+   "sum_Imps": 91636980.0,
+   "sum_TotalNetValue": 105665949.0,
+   "avg_TotalNetValue": 105665949.0
+  },
+  "4100": {
+   "parcel_count": 24,
+   "sum_Land": 38009331.0,
+   "sum_Imps": 61265266.0,
+   "sum_TotalNetValue": 95125587.0,
+   "avg_TotalNetValue": 3963566.12
+  },
+  "1400": {
+   "parcel_count": 110,
+   "sum_Land": 22861919.0,
+   "sum_Imps": 53691176.0,
+   "sum_TotalNetValue": 76161095.0,
+   "avg_TotalNetValue": 692373.59
+  },
+  "6400": {
+   "parcel_count": 12,
+   "sum_Land": 24413388.0,
+   "sum_Imps": 48952566.0,
+   "sum_TotalNetValue": 73365954.0,
+   "avg_TotalNetValue": 6113829.5
+  },
+  "1200": {
+   "parcel_count": 36,
+   "sum_Land": 21803957.0,
+   "sum_Imps": 51424956.0,
+   "sum_TotalNetValue": 72909642.0,
+   "avg_TotalNetValue": 2025267.83
+  },
+  "3704": {
+   "parcel_count": 4,
+   "sum_Land": 42392973.0,
+   "sum_Imps": 21991983.0,
+   "sum_TotalNetValue": 64384956.0,
+   "avg_TotalNetValue": 16096239.0
+  },
+  "8900": {
+   "parcel_count": 3,
+   "sum_Land": 11742534.0,
+   "sum_Imps": 47005914.0,
+   "sum_TotalNetValue": 62697657.0,
+   "avg_TotalNetValue": 20899219.0
+  },
+  "2541": {
+   "parcel_count": 26,
+   "sum_Land": 18602504.0,
+   "sum_Imps": 43474420.0,
+   "sum_TotalNetValue": 61964924.0,
+   "avg_TotalNetValue": 2383266.31
+  },
+  "4800": {
+   "parcel_count": 2,
+   "sum_Land": 17193854.0,
+   "sum_Imps": 38713708.0,
+   "sum_TotalNetValue": 58416901.0,
+   "avg_TotalNetValue": 29208450.5
+  },
+  "4201": {
+   "parcel_count": 4,
+   "sum_Land": 20369079.0,
+   "sum_Imps": 35998564.0,
+   "sum_TotalNetValue": 56367643.0,
+   "avg_TotalNetValue": 14091910.75
+  },
+  "7701": {
+   "parcel_count": 1,
+   "sum_Land": 6494520.0,
+   "sum_Imps": 38815581.0,
+   "sum_TotalNetValue": 46242016.0,
+   "avg_TotalNetValue": 46242016.0
+  },
+  "3900": {
+   "parcel_count": 32,
+   "sum_Land": 12772532.0,
+   "sum_Imps": 32358268.0,
+   "sum_TotalNetValue": 45130800.0,
+   "avg_TotalNetValue": 1410337.5
+  },
+  "3600": {
+   "parcel_count": 17,
+   "sum_Land": 15841375.0,
+   "sum_Imps": 25130914.0,
+   "sum_TotalNetValue": 40972289.0,
+   "avg_TotalNetValue": 2410134.65
+  },
+  "7340": {
+   "parcel_count": 123,
+   "sum_Land": 12535453.0,
+   "sum_Imps": 28005613.0,
+   "sum_TotalNetValue": 39710057.0,
+   "avg_TotalNetValue": 322845.99
+  },
+  "2501": {
+   "parcel_count": 19,
+   "sum_Land": 11123929.0,
+   "sum_Imps": 27950133.0,
+   "sum_TotalNetValue": 39011062.0,
+   "avg_TotalNetValue": 2053213.79
+  },
+  "8500": {
+   "parcel_count": 15,
+   "sum_Land": 19407405.0,
+   "sum_Imps": 12985910.0,
+   "sum_TotalNetValue": 33782436.0,
+   "avg_TotalNetValue": 2252162.4
+  },
+  "7000": {
+   "parcel_count": 26,
+   "sum_Land": 27107197.0,
+   "sum_Imps": 10737793.0,
+   "sum_TotalNetValue": 28637577.0,
+   "avg_TotalNetValue": 1101445.27
+  },
+  "3300": {
+   "parcel_count": 8,
+   "sum_Land": 11051618.0,
+   "sum_Imps": 17928818.0,
+   "sum_TotalNetValue": 27953170.0,
+   "avg_TotalNetValue": 3494146.25
+  },
+  "2200": {
+   "parcel_count": 42,
+   "sum_Land": 8293324.0,
+   "sum_Imps": 18077584.0,
+   "sum_TotalNetValue": 26335908.0,
+   "avg_TotalNetValue": 627045.43
+  },
+  "9300": {
+   "parcel_count": 7,
+   "sum_Land": 25016918.0,
+   "sum_Imps": 292164547.0,
+   "sum_TotalNetValue": 22941853.0,
+   "avg_TotalNetValue": 3277407.57
+  },
+  "9000": {
+   "parcel_count": 2,
+   "sum_Land": 4871618.0,
+   "sum_Imps": 17500316.0,
+   "sum_TotalNetValue": 22435290.0,
+   "avg_TotalNetValue": 11217645.0
+  },
+  "8100": {
+   "parcel_count": 8,
+   "sum_Land": 7278807.0,
+   "sum_Imps": 13953099.0,
+   "sum_TotalNetValue": 21231906.0,
+   "avg_TotalNetValue": 2653988.25
+  },
+  "6100": {
+   "parcel_count": 1,
+   "sum_Land": 29831.0,
+   "sum_Imps": 20640483.0,
+   "sum_TotalNetValue": 20670314.0,
+   "avg_TotalNetValue": 20670314.0
+  },
+  "4102": {
+   "parcel_count": 3,
+   "sum_Land": 5480312.0,
+   "sum_Imps": 13934998.0,
+   "sum_TotalNetValue": 19555889.0,
+   "avg_TotalNetValue": 6518629.67
+  },
+  "2502": {
+   "parcel_count": 16,
+   "sum_Land": 5051807.0,
+   "sum_Imps": 14055332.0,
+   "sum_TotalNetValue": 19030139.0,
+   "avg_TotalNetValue": 1189383.69
+  },
+  "9900": {
+   "parcel_count": 6,
+   "sum_Land": 5370799.0,
+   "sum_Imps": 11470396.0,
+   "sum_TotalNetValue": 17223564.0,
+   "avg_TotalNetValue": 2870594.0
+  },
+  "9401": {
+   "parcel_count": 8,
+   "sum_Land": 3803141.0,
+   "sum_Imps": 9568928.0,
+   "sum_TotalNetValue": 13372069.0,
+   "avg_TotalNetValue": 1671508.62
+  },
+  "7345": {
+   "parcel_count": 25,
+   "sum_Land": 4104034.0,
+   "sum_Imps": 9025807.0,
+   "sum_TotalNetValue": 13038841.0,
+   "avg_TotalNetValue": 521553.64
+  },
+  "9200": {
+   "parcel_count": 3,
+   "sum_Land": 4768662.0,
+   "sum_Imps": 7323823.0,
+   "sum_TotalNetValue": 12342579.0,
+   "avg_TotalNetValue": 4114193.0
+  },
+  "9301": {
+   "parcel_count": 2,
+   "sum_Land": 3610000.0,
+   "sum_Imps": 8536000.0,
+   "sum_TotalNetValue": 12146000.0,
+   "avg_TotalNetValue": 6073000.0
+  },
+  "3500": {
+   "parcel_count": 2,
+   "sum_Land": 2270735.0,
+   "sum_Imps": 7446506.0,
+   "sum_TotalNetValue": 9717241.0,
+   "avg_TotalNetValue": 4858620.5
+  },
+  "3605": {
+   "parcel_count": 2,
+   "sum_Land": 4941900.0,
+   "sum_Imps": 4577760.0,
+   "sum_TotalNetValue": 9519660.0,
+   "avg_TotalNetValue": 4759830.0
+  },
+  "1840": {
+   "parcel_count": 13,
+   "sum_Land": 2399867.0,
+   "sum_Imps": 5599969.0,
+   "sum_TotalNetValue": 7943836.0,
+   "avg_TotalNetValue": 611064.31
+  },
+  "8300": {
+   "parcel_count": 2,
+   "sum_Land": 7653665.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 7653665.0,
+   "avg_TotalNetValue": 3826832.5
+  },
+  "6300": {
+   "parcel_count": 7,
+   "sum_Land": 4157000.0,
+   "sum_Imps": 2400000.0,
+   "sum_TotalNetValue": 6926289.0,
+   "avg_TotalNetValue": 989469.86
+  },
+  "8000": {
+   "parcel_count": 2,
+   "sum_Land": 1384561.0,
+   "sum_Imps": 5407372.0,
+   "sum_TotalNetValue": 6791933.0,
+   "avg_TotalNetValue": 3395966.5
+  },
+  "9600": {
+   "parcel_count": 1,
+   "sum_Land": 2215740.0,
+   "sum_Imps": 2215740.0,
+   "sum_TotalNetValue": 5239589.0,
+   "avg_TotalNetValue": 5239589.0
+  },
+  "5600": {
+   "parcel_count": 6,
+   "sum_Land": 4178658.0,
+   "sum_Imps": 1000000.0,
+   "sum_TotalNetValue": 5178658.0,
+   "avg_TotalNetValue": 863109.67
+  },
+  "4400": {
+   "parcel_count": 2,
+   "sum_Land": 3337678.0,
+   "sum_Imps": 1717670.0,
+   "sum_TotalNetValue": 5055348.0,
+   "avg_TotalNetValue": 2527674.0
+  },
+  "7500": {
+   "parcel_count": 8,
+   "sum_Land": 26549480.0,
+   "sum_Imps": 45991439.0,
+   "sum_TotalNetValue": 4671012.0,
+   "avg_TotalNetValue": 583876.5
+  },
+  "3200": {
+   "parcel_count": 2,
+   "sum_Land": 1587120.0,
+   "sum_Imps": 2690719.0,
+   "sum_TotalNetValue": 4277839.0,
+   "avg_TotalNetValue": 2138919.5
+  },
+  "4000": {
+   "parcel_count": 4,
+   "sum_Land": 3898810.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 3898810.0,
+   "avg_TotalNetValue": 974702.5
+  },
+  "5100": {
+   "parcel_count": 3,
+   "sum_Land": 1245335.0,
+   "sum_Imps": 1791059.0,
+   "sum_TotalNetValue": 3035264.0,
+   "avg_TotalNetValue": 1011754.67
+  },
+  "5500": {
+   "parcel_count": 5,
+   "sum_Land": 2770992.0,
+   "sum_Imps": 115232.0,
+   "sum_TotalNetValue": 2939644.0,
+   "avg_TotalNetValue": 587928.8
+  },
+  "1440": {
+   "parcel_count": 8,
+   "sum_Land": 818826.0,
+   "sum_Imps": 1911233.0,
+   "sum_TotalNetValue": 2681059.0,
+   "avg_TotalNetValue": 335132.38
+  },
+  "1101": {
+   "parcel_count": 3,
+   "sum_Land": 785730.0,
+   "sum_Imps": 1838619.0,
+   "sum_TotalNetValue": 2617349.0,
+   "avg_TotalNetValue": 872449.67
+  },
+  "1201": {
+   "parcel_count": 2,
+   "sum_Land": 605494.0,
+   "sum_Imps": 1530720.0,
+   "sum_TotalNetValue": 2129214.0,
+   "avg_TotalNetValue": 1064607.0
+  },
+  "4101": {
+   "parcel_count": 1,
+   "sum_Land": 633316.0,
+   "sum_Imps": 1473793.0,
+   "sum_TotalNetValue": 2107109.0,
+   "avg_TotalNetValue": 2107109.0
+  },
+  "2542": {
+   "parcel_count": 2,
+   "sum_Land": 537947.0,
+   "sum_Imps": 1553323.0,
+   "sum_TotalNetValue": 2084270.0,
+   "avg_TotalNetValue": 1042135.0
+  },
+  "4500": {
+   "parcel_count": 2,
+   "sum_Land": 469394.0,
+   "sum_Imps": 1517043.0,
+   "sum_TotalNetValue": 1986437.0,
+   "avg_TotalNetValue": 993218.5
+  },
+  "3800": {
+   "parcel_count": 1,
+   "sum_Land": 540180.0,
+   "sum_Imps": 1352079.0,
+   "sum_TotalNetValue": 1892259.0,
+   "avg_TotalNetValue": 1892259.0
+  },
+  "6600": {
+   "parcel_count": 10,
+   "sum_Land": 4565114.0,
+   "sum_Imps": 41784709.0,
+   "sum_TotalNetValue": 961328.0,
+   "avg_TotalNetValue": 96132.8
+  },
+  "1000": {
+   "parcel_count": 10,
+   "sum_Land": 949762.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 949762.0,
+   "avg_TotalNetValue": 94976.2
+  },
+  "7325": {
+   "parcel_count": 1,
+   "sum_Land": 279491.0,
+   "sum_Imps": 652146.0,
+   "sum_TotalNetValue": 924637.0,
+   "avg_TotalNetValue": 924637.0
+  },
+  "3610": {
+   "parcel_count": 1,
+   "sum_Land": 464224.0,
+   "sum_Imps": 290140.0,
+   "sum_TotalNetValue": 754364.0,
+   "avg_TotalNetValue": 754364.0
+  },
+  "8700": {
+   "parcel_count": 1,
+   "sum_Land": 184892.0,
+   "sum_Imps": 555045.0,
+   "sum_TotalNetValue": 739937.0,
+   "avg_TotalNetValue": 739937.0
+  },
+  "2900": {
+   "parcel_count": 1,
+   "sum_Land": 167085.0,
+   "sum_Imps": 570412.0,
+   "sum_TotalNetValue": 730497.0,
+   "avg_TotalNetValue": 730497.0
+  },
+  "2100": {
+   "parcel_count": 1,
+   "sum_Land": 136283.0,
+   "sum_Imps": 466049.0,
+   "sum_TotalNetValue": 595332.0,
+   "avg_TotalNetValue": 595332.0
+  },
+  "1140": {
+   "parcel_count": 1,
+   "sum_Land": 133969.0,
+   "sum_Imps": 312817.0,
+   "sum_TotalNetValue": 439786.0,
+   "avg_TotalNetValue": 439786.0
+  },
+  "5700": {
+   "parcel_count": 22,
+   "sum_Land": 224866.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 224866.0,
+   "avg_TotalNetValue": 10221.18
+  },
+  "1901": {
+   "parcel_count": 1,
+   "sum_Land": 24452.0,
+   "sum_Imps": 122944.0,
+   "sum_TotalNetValue": 147396.0,
+   "avg_TotalNetValue": 147396.0
+  },
+  "5000": {
+   "parcel_count": 4,
+   "sum_Land": 66134.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 66134.0,
+   "avg_TotalNetValue": 16533.5
+  },
+  "6001": {
+   "parcel_count": 4,
+   "sum_Land": 30576.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 30576.0,
+   "avg_TotalNetValue": 7644.0
+  },
+  "1190": {
+   "parcel_count": 110,
+   "sum_Land": 12013.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 12013.0,
+   "avg_TotalNetValue": 109.21
+  },
+  "0300": {
+   "parcel_count": 317,
+   "sum_Land": 0.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 0.0,
+   "avg_TotalNetValue": 0.0
+  },
+  "1890": {
+   "parcel_count": 649,
+   "sum_Land": 0.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 0.0,
+   "avg_TotalNetValue": 0.0
+  },
+  "0400": {
+   "parcel_count": 1,
+   "sum_Land": 0.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 0.0,
+   "avg_TotalNetValue": 0.0
+  },
+  "7395": {
+   "parcel_count": 650,
+   "sum_Land": 0.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 0.0,
+   "avg_TotalNetValue": 0.0
+  },
+  "1590": {
+   "parcel_count": 5,
+   "sum_Land": 0.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 0.0,
+   "avg_TotalNetValue": 0.0
+  },
+  "7390": {
+   "parcel_count": 241,
+   "sum_Land": 0.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 0.0,
+   "avg_TotalNetValue": 0.0
+  },
+  "3990": {
+   "parcel_count": 5,
+   "sum_Land": 0.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 0.0,
+   "avg_TotalNetValue": 0.0
+  },
+  "0500": {
+   "parcel_count": 3,
+   "sum_Land": 0.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 0.0,
+   "avg_TotalNetValue": 0.0
+  },
+  "7090": {
+   "parcel_count": 231,
+   "sum_Land": 0.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 0.0,
+   "avg_TotalNetValue": 0.0
+  },
+  "9491": {
+   "parcel_count": 1,
+   "sum_Land": 0.0,
+   "sum_Imps": 0.0,
+   "sum_TotalNetValue": 0.0,
+   "avg_TotalNetValue": 0.0
+  }
+ },
+ "top20_by_TotalNetValue": [
+  {
+   "APN": "941-2855-1",
+   "SitusAddress": "7688 SAINT PATRICK WAY DUBLIN 94568",
+   "TotalNetValue": 250528086.0,
+   "Land": 41824708.0,
+   "Imps": 203459400.0,
+   "TRAPrimary": "26",
+   "TRA_full": "26-000",
+   "UseCode": "7700",
+   "SitusZip": "94568"
+  },
+  {
+   "APN": "986-34-16",
+   "SitusAddress": "5286 IRON HORSE PKWY DUBLIN 94568",
+   "TotalNetValue": 136202394.0,
+   "Land": 20096000.0,
+   "Imps": 114696717.0,
+   "TRAPrimary": "26",
+   "TRA_full": "26-015",
+   "UseCode": "7700",
+   "SitusZip": "94568"
+  },
+  {
+   "APN": "985-27-2-2",
+   "SitusAddress": " FALLON RD DUBLIN 94568",
+   "TotalNetValue": 128657418.0,
+   "Land": 128657418.0,
+   "Imps": 0.0,
+   "TRAPrimary": "26",
+   "TRA_full": "26-034",
+   "UseCode": "3000",
+   "SitusZip": "94568"
+  },
+  {
+   "APN": "941-2842-1-1",
+   "SitusAddress": "6700 GOLDEN GATE DR DUBLIN 94568",
+   "TotalNetValue": 122720215.0,
+   "Land": 6574061.0,
+   "Imps": 115227958.0,
+   "TRAPrimary": "26",
+   "TRA_full": "26-000",
+   "UseCode": "7700",
+   "SitusZip": "94568"
+  },
+  {
+   "APN": "986-9-1",
+   "SitusAddress": "5050 HACIENDA DR DUBLIN 94568",
+   "TotalNetValue": 109245946.0,
+   "Land": 27663480.0,
+   "Imps": 81293746.0,
+   "TRAPrimary": "26",
+   "TRA_full": "26-021",
+   "UseCode": "7700",
+   "SitusZip": "94568"
+  },
+  {
+   "APN": "986-14-10",
+   "SitusAddress": " CENTRAL PKWY DUBLIN 94568",
+   "TotalNetValue": 105665949.0,
+   "Land": 14028969.0,
+   "Imps": 91636980.0,
+   "TRAPrimary": "26",
+   "TRA_full": "26-021",
+   "UseCode": "4205",
+   "SitusZip": "94568"
+  },
+  {
+   "APN": "986-34-23",
+   "SitusAddress": "5180 IRON HORSE PKWY DUBLIN 94568",
+   "TotalNetValue": 105145578.0,
+   "Land": 8564488.0,
+   "Imps": 95560244.0,
+   "TRAPrimary": "26",
+   "TRA_full": "26-015",
+   "UseCode": "7700",
+   "SitusZip": "94568"
+  },
+  {
+   "APN": "986-75-1",
+   "SitusAddress": " DOUGHERTY RD DUBLIN 94568",
+   "TotalNetValue": 104404037.0,
+   "Land": 11245739.0,
+   "Imps": 92085804.0,
+   "TRAPrimary": "26",
+   "TRA_full": "26-015",
+   "UseCode": "7700",
+   "SitusZip": "94568"
+  },
+  {
+   "APN": "941-550-69",
+   "SitusAddress": "6233 DOUGHERTY RD DUBLIN 94568",
+   "TotalNetValue": 93289510.0,
+   "Land": 27642090.0,
+   "Imps": 65058637.0,
+   "TRAPrimary": "26",
+   "TRA_full": "26-001",
+   "UseCode": "7700",
+   "SitusZip": "94568"
+  },
+  {
+   "APN": "986-14-7",
+   "SitusAddress": "5130 HACIENDA DR DUBLIN 94568",
+   "TotalNetValue": 92242729.0,
+   "Land": 9287975.0,
+   "Imps": 38664309.0,
+   "TRAPrimary": "26",
+   "TRA_full": "26-021",
+   "UseCode": "9400",
+   "SitusZip": "94568"
+  },
+  {
+   "APN": "986-34-22",
+   "SitusAddress": "5200 DEMARCUS BLVD DUBLIN 94568",
+   "TotalNetValue": 90278650.0,
+   "Land": 8292488.0,
+   "Imps": 81159228.0,
+   "TRAPrimary": "26",
+   "TRA_full": "26-015",
+   "UseCode": "7700",
+   "SitusZip": "94568"
+  },
+  {
+   "APN": "941-40-6-10",
+   "SitusAddress": "7100 SAN RAMON RD DUBLIN 94568",
+   "TotalNetValue": 65789236.0,
+   "Land": 12871320.0,
+   "Imps": 52740904.0,
+   "TRAPrimary": "26",
+   "TRA_full": "26-001",
+   "UseCode": "7700",
+   "SitusZip": "94568"
+  },
+  {
+   "APN": "941-205-1-46",
+   "SitusAddress": "6701 SIERRA CT DUBLIN 94568",
+   "TotalNetValue": 64252800.0,
+   "Land": 20190550.0,
+   "Imps": 44062250.0,
+   "TRAPrimary": "26",
+   "TRA_full": "26-001",
+   "UseCode": "4200",
+   "SitusZip": "94568"
+  },
+  {
+   "APN": "986-14-11-2",
+   "SitusAddress": "3 PARK PL DUBLIN 94568",
+   "TotalNetValue": 63898975.0,
+   "Land": 15644887.0,
+   "Imps": 47019998.0,
+   "TRAPrimary": "26",
+   "TRA_full": "26-021",
+   "UseCode": "9500",
+   "SitusZip": "94568"
+  },
+  {
+   "APN": "986-8-9",
+   "SitusAddress": "4820 DUBLIN BLVD DUBLIN 94568",
+   "TotalNetValue": 58250993.0,
+   "Land": 20098940.0,
+   "Imps": 38152053.0,
+   "TRAPrimary": "26",
+   "TRA_full": "26-021",
+   "UseCode": "3701",
+   "SitusZip": "94568"
+  },
+  {
+   "APN": "986-14-1",
+   "SitusAddress": "5160 HACIENDA DR DUBLIN 94568",
+   "TotalNetValue": 57726589.0,
+   "Land": 16732500.0,
+   "Imps": 38484750.0,
+   "TRAPrimary": "26",
+   "TRA_full": "26-021",
+   "UseCode": "4800",
+   "SitusZip": "94568"
+  },
+  {
+   "APN": "985-48-3",
+   "SitusAddress": " LOCKHART ST DUBLIN 94568",
+   "TotalNetValue": 56250909.0,
+   "Land": 9338901.0,
+   "Imps": 46912008.0,
+   "TRAPrimary": "26",
+   "TRA_full": "26-026",
+   "UseCode": "7700",
+   "SitusZip": "94568"
+  },
+  {
+   "APN": "985-48-4",
+   "SitusAddress": " LOCKHART ST DUBLIN 94568",
+   "TotalNetValue": 55649604.0,
+   "Land": 8816851.0,
+   "Imps": 46832753.0,
+   "TRAPrimary": "26",
+   "TRA_full": "26-026",
+   "UseCode": "7700",
+   "SitusZip": "94568"
+  },
+  {
+   "APN": "986-14-11-1",
+   "SitusAddress": "1 PARK PL DUBLIN 94568",
+   "TotalNetValue": 55270000.0,
+   "Land": 16000000.0,
+   "Imps": 39270000.0,
+   "TRAPrimary": "26",
+   "TRA_full": "26-021",
+   "UseCode": "9500",
+   "SitusZip": "94568"
+  },
+  {
+   "APN": "986-17-12",
+   "SitusAddress": "4460 TASSAJARA RD  A1 DUBLIN 94568",
+   "TotalNetValue": 54858113.0,
+   "Land": 17126923.0,
+   "Imps": 37731190.0,
+   "TRAPrimary": "26",
+   "TRA_full": "26-013",
+   "UseCode": "3700",
+   "SitusZip": "94568"
+  }
+ ],
+ "diagnostics": {
+  "null_TotalNetValue_count": 0,
+  "zero_TotalNetValue_count": 2273,
+  "parcels_with_HOEX_homeowner_exemption": 10919,
+  "parcels_with_OTEX_other_exemption": 66,
+  "parcels_with_any_exemption": 10985,
+  "unique_APNs": 23997,
+  "duplicate_APN_values": 135,
+  "rows_with_null_APN": 0,
+  "rows_with_SitusUnit_condo_or_multiunit_indicator": 2972,
+  "rows_with_TRASecondary": 24140,
+  "rows_with_null_TRAPrimary": 0,
+  "distinct_TRAPrimary": 3,
+  "distinct_full_TRA": 43,
+  "distinct_SitusZip": 2,
+  "distinct_UseCode": 91
+ }
+}

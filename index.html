@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dublin, CA Property Tax Parcel Map — Taxes by Locality, Down to the House</title>
+<meta name="description" content="Interactive map of all 24,140 Dublin, CA property tax parcels. Assessed values and estimated property taxes by Tax Rate Area (locality), with drill-down to individual parcels. Source: Alameda County Assessor.">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+  :root{--ink:#17222e;--muted:#5b6b7c;--line:#d9e0e8;--accent:#8c4a00;--accent2:#0b5394;}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#f4f6f8}
+  header{background:#17222e;color:#fff;padding:18px 20px 14px}
+  header h1{margin:0 0 4px;font-size:22px;line-height:1.25}
+  header p{margin:0;color:#c3cfdb;font-size:13.5px;max-width:900px}
+  .stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .stat{background:#22303f;border:1px solid #33445a;border-radius:8px;padding:8px 12px;min-width:150px}
+  .stat b{display:block;font-size:17px;color:#fff}
+  .stat span{font-size:11.5px;color:#9fb2c5;text-transform:uppercase;letter-spacing:.04em}
+  .wrap{display:flex;flex-wrap:wrap;gap:0}
+  #map{flex:2 1 620px;height:74vh;min-height:440px}
+  aside{flex:1 1 340px;max-width:460px;background:#fff;border-left:1px solid var(--line);height:74vh;min-height:440px;overflow-y:auto;padding:14px 16px}
+  @media (max-width:900px){aside{max-width:none;height:auto}#map{height:60vh}}
+  h2{font-size:15px;margin:16px 0 8px}
+  h2:first-child{margin-top:0}
+  .note{font-size:12.5px;color:var(--muted);line-height:1.45}
+  .searchrow{display:flex;gap:6px}
+  .searchrow input{flex:1;padding:9px 10px;border:1px solid var(--line);border-radius:6px;font-size:14px}
+  .searchrow button,.btn{padding:9px 13px;border:0;border-radius:6px;background:var(--accent2);color:#fff;font-size:13.5px;cursor:pointer}
+  .btn.secondary{background:#e8edf2;color:var(--ink)}
+  #results{margin:8px 0 0;padding:0;list-style:none}
+  #results li{padding:7px 9px;border:1px solid var(--line);border-radius:6px;margin-bottom:6px;cursor:pointer;font-size:13px}
+  #results li:hover{background:#f0f5fa}
+  #results small{color:var(--muted)}
+  table{width:100%;border-collapse:collapse;font-size:12.8px}
+  th,td{padding:5px 6px;text-align:right;border-bottom:1px solid #edf1f5;white-space:nowrap}
+  th:first-child,td:first-child{text-align:left}
+  tbody tr{cursor:pointer}
+  tbody tr:hover{background:#f0f5fa}
+  tbody tr.sel{background:#fdeed3}
+  .bar{height:5px;background:#f0b35c;border-radius:3px;margin-top:3px}
+  .detail{border:1px solid var(--line);border-radius:8px;padding:10px 12px;background:#fbfcfe}
+  .detail h3{margin:0 0 6px;font-size:14.5px}
+  .detail table{font-size:13px}
+  .detail td{text-align:left}
+  .detail td:last-child{text-align:right;font-weight:600}
+  .legend{background:#fff;border:1px solid var(--line);border-radius:8px;padding:9px 11px;font-size:12px;line-height:1.7;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+  .legend i{display:inline-block;width:13px;height:13px;border-radius:3px;margin-right:6px;vertical-align:-2px;border:1px solid rgba(0,0,0,.25)}
+  footer{padding:16px 20px 26px;font-size:12.5px;color:var(--muted);line-height:1.55;max-width:980px}
+  footer a{color:var(--accent2)}
+  .pill{display:inline-block;background:#fdeed3;color:#7a3f00;border-radius:20px;padding:1px 9px;font-size:11.5px;font-weight:600}
+  #status{font-size:12.5px;color:var(--muted);margin-top:6px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Dublin, CA — Property Tax Parcel Map</h1>
+  <p>Every property-tax parcel in Dublin, California. See assessed value and estimated property tax totals by <b>locality (Tax Rate Area)</b>, then zoom in and click any parcel — down to an individual house. Assessed values are the county's real roll figures; tax figures are estimates (see methodology below).</p>
+  <div class="stats">
+    <div class="stat"><b>24,140</b><span>Parcels in Dublin</span></div>
+    <div class="stat"><b>$25.08B</b><span>Net assessed value</span></div>
+    <div class="stat"><b>43</b><span>Tax Rate Areas</span></div>
+    <div class="stat"><b>~$251M – $306M</b><span>Est. annual tax (1.00%–1.22%)</span></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div id="map"></div>
+  <aside>
+    <h2>Find a house / parcel</h2>
+    <div class="searchrow">
+      <input id="q" type="text" placeholder="Street address or APN, e.g. 7420 Amador Valley Blvd or 941-…">
+      <button id="go">Search</button>
+    </div>
+    <div id="status">Parcels appear when you zoom in to street level. Click any parcel for its details.</div>
+    <ul id="results"></ul>
+
+    <div id="detailBox" style="display:none">
+      <h2>Parcel detail</h2>
+      <div class="detail" id="detail"></div>
+    </div>
+
+    <h2>Taxes by locality — Tax Rate Areas</h2>
+    <p class="note">A Tax Rate Area (TRA) is the official tax locality: every parcel in a TRA shares the same composite tax rate. Click a row (or a shaded area on the map) to isolate that locality. Estimated tax excludes direct charges, special assessments and Mello-Roos — see methodology.</p>
+    <div style="margin:8px 0"><button class="btn secondary" id="resetTra" style="display:none">Show all of Dublin</button></div>
+    <table>
+      <thead><tr><th>TRA</th><th>Parcels</th><th>Net assessed</th><th>Est. tax*</th></tr></thead>
+      <tbody id="traRows"></tbody>
+    </table>
+
+    <h2>By ZIP code</h2>
+    <table>
+      <thead><tr><th>ZIP</th><th>Parcels</th><th>Net assessed</th><th>Est. tax*</th></tr></thead>
+      <tbody id="zipRows"></tbody>
+    </table>
+    <p class="note">*Estimated annual tax range uses the official 1.0000% base levy and the CA Board of Equalization Alameda county-average rate of 1.220%. Actual TRA composite rates vary by locality.</p>
+  </aside>
+</div>
+
+<footer>
+  <h2 style="margin-top:0">Methodology &amp; caveats — please read</h2>
+  <p><b>Assessed values are real.</b> Parcel boundaries, APNs, addresses, land/improvement values, exemptions and net assessed values come from the Alameda County Assessor's official parcel service (snapshot verified Nov 1, 2026: 24,140 Dublin parcels, $25,083,551,342 total net assessed value). The parcel layer on this map reads that county service live, so drill-down values stay current. Values are Proposition 13 roll values (purchase price + max 2%/yr), <i>not</i> market values.</p>
+  <p><b>Tax figures are estimates, labeled as such.</b> There is no public bulk file of actual taxes paid per parcel — the county releases bills one parcel at a time. Estimated tax = net assessed value × tax rate. The low end uses the official FY2025-26 countywide base levy of 1.0000%. The high end uses the California Board of Equalization's published Alameda County <i>average</i> rate of 1.220%. Each TRA's true composite rate (1% + voter-approved bonds for that exact area) sits in the county's "51-427 Composite Tax Rates" report; that PDF is hosted behind a county SharePoint login wall and could not be retrieved programmatically — when those 43 rates are loaded, this map will show exact per-TRA estimates instead of the range.</p>
+  <p><b>Estimates exclude</b> fixed direct charges, special assessments, and Mello-Roos community-facilities-district charges, which are billed per parcel and can add thousands of dollars a year in newer east Dublin developments. 2,273 Dublin parcels (9.4%) carry a $0 net value — mostly common areas and exempt parcels — and pay no ad valorem tax. 135 APNs appear on more than one parcel row (condos/multi-unit), so drill-down is keyed to the individual parcel, not the APN alone.</p>
+  <p>Sources: <a href="https://services5.arcgis.com/ROBnTHSNjoZ2Wm1P/arcgis/rest/services/Parcels/FeatureServer/0" target="_blank" rel="noopener">Alameda County Parcels (ArcGIS FeatureServer)</a> · <a href="https://auditor.alamedacountyca.gov/tax-property-reports/" target="_blank" rel="noopener">Auditor-Controller Property Tax Reports</a> · <a href="https://github.com/Undeterred404/dublin-parcel-tax-map" target="_blank" rel="noopener">Source code &amp; data notes on GitHub</a>. Map data © OpenStreetMap contributors; imagery © Esri.</p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/esri-leaflet@3.0.12/dist/esri-leaflet.js"></script>
+<script>
+const SERVICE = "https://services5.arcgis.com/ROBnTHSNjoZ2Wm1P/arcgis/rest/services/Parcels/FeatureServer/0";
+const BASE_RATE = 0.01, AVG_RATE = 0.0122;
+const fmt$ = n => n == null ? "—" : "$" + Math.round(n).toLocaleString("en-US");
+const fmtN = n => n == null ? "—" : Math.round(n).toLocaleString("en-US");
+const fullTra = p => (p.TRAPrimary || "?") + "-" + (p.TRASecondary || "???");
+const estRange = v => v ? fmt$(v * BASE_RATE) + " – " + fmt$(v * AVG_RATE) : "—";
+
+const map = L.map("map").setView([37.71, -121.93], 12);
+const streets = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {maxZoom: 19, attribution: "© OpenStreetMap contributors"}).addTo(map);
+const imagery = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {maxZoom: 19, attribution: "Imagery © Esri"});
+
+// ---------- TRA choropleth (locality overlay) ----------
+function traColor(v){ // by net assessed value
+  if (v > 2.5e9) return "#7f2704";
+  if (v > 1.5e9) return "#a63603";
+  if (v > 7.5e8) return "#d94801";
+  if (v > 2.5e8) return "#f16913";
+  if (v > 5e7)  return "#fd8d3c";
+  if (v > 0)    return "#fdae6b";
+  return "#d9d9d9";
+}
+let traLayer = null, traData = null, selectedTra = null;
+fetch("data/tra-boundaries.geojson").then(r => r.json()).then(gj => {
+  traData = gj;
+  traLayer = L.geoJSON(gj, {
+    style: f => ({color:"#7a3f00", weight:1, fillColor: traColor(f.properties.sum_TotalNetValue), fillOpacity:.5}),
+    onEachFeature: (f, layer) => {
+      const p = f.properties;
+      layer.bindTooltip(`<b>TRA ${p.tra}</b><br>${fmtN(p.parcel_count)} parcels<br>Net assessed ${fmt$(p.sum_TotalNetValue)}<br>Est. tax ${estRange(p.sum_TotalNetValue)}`, {sticky:true});
+      layer.on("click", () => selectTra(p.tra, false));
+    }
+  }).addTo(map);
+  buildTraTable(gj.features.map(f => f.properties));
+}).catch(e => { document.getElementById("status").textContent = "Locality overlay failed to load: " + e.message; });
+
+function buildTraTable(rows){
+  rows.sort((a,b) => b.sum_TotalNetValue - a.sum_TotalNetValue);
+  const max = rows.length ? rows[0].sum_TotalNetValue : 1;
+  const tb = document.getElementById("traRows");
+  tb.innerHTML = rows.map(p => `
+    <tr data-tra="${p.tra}">
+      <td>${p.tra}<div class="bar" style="width:${Math.max(3, 100*p.sum_TotalNetValue/max)}%"></div></td>
+      <td>${fmtN(p.parcel_count)}</td>
+      <td>${fmt$(p.sum_TotalNetValue)}</td>
+      <td>${estRange(p.sum_TotalNetValue)}</td>
+    </tr>`).join("");
+  tb.querySelectorAll("tr").forEach(tr => tr.addEventListener("click", () => selectTra(tr.dataset.tra, true)));
+}
+
+// ---------- ZIP table ----------
+fetch("data/locality-stats.json").then(r => r.json()).then(d => {
+  const rows = Object.entries(d.by_SitusZip).sort((a,b) => b[1].sum_TotalNetValue - a[1].sum_TotalNetValue);
+  document.getElementById("zipRows").innerHTML = rows.map(([zip, s]) => `
+    <tr style="cursor:default"><td>${zip}</td><td>${fmtN(s.parcel_count)}</td><td>${fmt$(s.sum_TotalNetValue)}</td><td>${estRange(s.sum_TotalNetValue)}</td></tr>`).join("");
+}).catch(()=>{});
+
+// ---------- Parcel layer (live from the county) ----------
+function parcelColor(v){
+  if (v == null || v === 0) return "#bdbdbd";
+  if (v < 5e5) return "#c6dbef";
+  if (v < 1e6) return "#6baed6";
+  if (v < 2e6) return "#3182bd";
+  if (v < 5e6) return "#08519c";
+  return "#08306b";
+}
+const parcels = L.esri.featureLayer({
+  url: SERVICE,
+  where: "SitusCity = 'DUBLIN'",
+  minZoom: 14, maxZoom: 19,
+  simplifyFactor: 0.5, precision: 5,
+  fields: ["OBJECTID","APN","TRAPrimary","TRASecondary","SitusAddress","SitusUnit","SitusZip","Land","Imps","HOEX","OTEX","TotalNetValue","UseCode"],
+  style: f => ({color:"#333", weight:.5, fillColor: parcelColor(f.properties.TotalNetValue), fillOpacity:.65})
+}).addTo(map);
+
+parcels.on("click", e => { if (e.layer && e.layer.feature) showDetail(e.layer.feature.properties); });
+parcels.on("load", () => { document.getElementById("status").textContent = "Showing live county parcels for the current view. Click any parcel for its details."; });
+
+const layerCtl = L.control.layers({"Streets": streets, "Satellite": imagery}, {}, {collapsed:true}).addTo(map);
+// move base switch: Leaflet treats first two as base layers only if added via control before; ensure one active
+const legend = L.control({position:"bottomright"});
+legend.onAdd = () => {
+  const d = L.DomUtil.create("div","legend");
+  d.innerHTML = `<b>Parcel net assessed value</b><br>
+    <i style="background:#bdbdbd"></i>$0 (common area / exempt)<br>
+    <i style="background:#c6dbef"></i>under $500K<br>
+    <i style="background:#6baed6"></i>$500K – $1M<br>
+    <i style="background:#3182bd"></i>$1M – $2M<br>
+    <i style="background:#08519c"></i>$2M – $5M<br>
+    <i style="background:#08306b"></i>over $5M<br>
+    <b style="display:block;margin-top:5px">Orange overlay = Tax Rate Area totals</b>`;
+  return d;
+};
+legend.addTo(map);
+
+// ---------- Parcel detail ----------
+function showDetail(p){
+  const tra = fullTra(p);
+  const addr = (p.SitusAddress || "").trim() || "Address not listed";
+  const ex = (p.HOEX || 0) + (p.OTEX || 0);
+  document.getElementById("detail").innerHTML = `
+    <h3>${addr}${p.SitusUnit ? " Unit " + p.SitusUnit : ""}</h3>
+    <table>
+      <tr><td>APN</td><td>${p.APN || "—"}</td></tr>
+      <tr><td>Tax Rate Area (locality)</td><td>${tra}</td></tr>
+      <tr><td>Land value</td><td>${fmt$(p.Land)}</td></tr>
+      <tr><td>Improvements value</td><td>${fmt$(p.Imps)}</td></tr>
+      <tr><td>Exemptions (homeowner/other)</td><td>${ex ? "−" + fmt$(ex) : "—"}</td></tr>
+      <tr><td>Net assessed value</td><td>${fmt$(p.TotalNetValue)}</td></tr>
+      <tr><td>Est. annual tax (range)</td><td>${estRange(p.TotalNetValue)}</td></tr>
+      <tr><td>County use code</td><td>${p.UseCode || "—"}</td></tr>
+    </table>
+    <p class="note" style="margin:8px 0 0">Estimated tax = net assessed value × 1.0000% (official base levy) to × 1.220% (county-average rate). Excludes direct charges, special assessments and Mello-Roos, which can be significant in east Dublin. Verify an exact bill on the Alameda County Treasurer-Tax Collector portal by APN.</p>`;
+  document.getElementById("detailBox").style.display = "block";
+}
+
+// ---------- TRA selection ----------
+function selectTra(tra, zoom){
+  selectedTra = tra;
+  document.querySelectorAll("#traRows tr").forEach(r => r.classList.toggle("sel", r.dataset.tra === tra));
+  document.getElementById("resetTra").style.display = "inline-block";
+  const [prim, sec] = tra.split("-");
+  parcels.setWhere(`SitusCity = 'DUBLIN' AND TRAPrimary = '${prim}' AND TRASecondary = '${sec}'`);
+  if (traLayer){
+    traLayer.eachLayer(l => {
+      const on = l.feature.properties.tra === tra;
+      l.setStyle({weight: on ? 3 : 1, color: on ? "#b30000" : "#7a3f00", fillOpacity: on ? .55 : .18});
+      if (on && zoom) map.flyToBounds(l.getBounds(), {padding:[20,20]});
+    });
+  }
+  document.getElementById("status").textContent = "Showing locality TRA " + tra + " — zoom in to street level to see and click individual parcels.";
+}
+document.getElementById("resetTra").addEventListener("click", () => {
+  selectedTra = null;
+  document.querySelectorAll("#traRows tr").forEach(r => r.classList.remove("sel"));
+  document.getElementById("resetTra").style.display = "none";
+  parcels.setWhere("SitusCity = 'DUBLIN'");
+  if (traLayer) traLayer.eachLayer(l => l.setStyle({weight:1, color:"#7a3f00", fillOpacity:.5}));
+  map.flyTo([37.71, -121.93], 12);
+  document.getElementById("status").textContent = "Showing all of Dublin. Zoom in to street level to see individual parcels.";
+});
+
+// ---------- Search ----------
+async function doSearch(){
+  const raw = document.getElementById("q").value.trim();
+  const ul = document.getElementById("results");
+  ul.innerHTML = "";
+  if (!raw) return;
+  const term = raw.replace(/'/g, "''").toUpperCase();
+  const where = encodeURIComponent(`SitusCity = 'DUBLIN' AND (UPPER(SitusAddress) LIKE '%${term}%' OR UPPER(APN) LIKE '%${term}%')`);
+  const url = `${SERVICE}/query?where=${where}&outFields=*&returnGeometry=true&outSR=4326&resultRecordCount=12&f=geojson`;
+  document.getElementById("status").textContent = "Searching county records…";
+  try{
+    const gj = await (await fetch(url)).json();
+    const feats = gj.features || [];
+    document.getElementById("status").textContent = feats.length ? `Found ${feats.length} parcel(s).` : "No parcel matched that address or APN in Dublin.";
+    feats.forEach(f => {
+      const p = f.properties;
+      const li = document.createElement("li");
+      li.innerHTML = `<b>${(p.SitusAddress || "").trim()}</b> — APN ${p.APN}<br><small>Net assessed ${fmt$(p.TotalNetValue)} · TRA ${fullTra(p)} · Est. tax ${estRange(p.TotalNetValue)}</small>`;
+      li.addEventListener("click", () => {
+        showDetail(p);
+        const g = L.geoJSON(f);
+        map.flyToBounds(g.getBounds(), {maxZoom: 17, padding:[30,30]});
+      });
+      ul.appendChild(li);
+    });
+  }catch(e){
+    document.getElementById("status").textContent = "Search failed: " + e.message;
+  }
+}
+document.getElementById("go").addEventListener("click", doSearch);
+document.getElementById("q").addEventListener("keydown", e => { if (e.key === "Enter") doSearch(); });
+</script>
+</body>
+</html>
