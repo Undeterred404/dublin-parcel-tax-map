@@ -108,7 +108,7 @@
   <p><b>Assessed values are real.</b> Parcel boundaries, APNs, addresses, land/improvement values, exemptions and net assessed values come from the Alameda County Assessor's official parcel service (snapshot verified Nov 1, 2026: 24,140 Dublin parcels, $25,083,551,342 total net assessed value). The parcel layer on this map reads that county service live, so drill-down values stay current. Values are Proposition 13 roll values (purchase price + max 2%/yr), <i>not</i> market values.</p>
   <p><b>Tax figures are estimates, labeled as such.</b> There is no public bulk file of actual taxes paid per parcel — the county releases bills one parcel at a time. Estimated tax = net assessed value × tax rate. The low end uses the official FY2025-26 countywide base levy of 1.0000%. The high end uses the California Board of Equalization's published Alameda County <i>average</i> rate of 1.220%. Each TRA's true composite rate (1% + voter-approved bonds for that exact area) sits in the county's "51-427 Composite Tax Rates" report; that PDF is hosted behind a county SharePoint login wall and could not be retrieved programmatically — when those 43 rates are loaded, this map will show exact per-TRA estimates instead of the range.</p>
   <p><b>Estimates exclude</b> fixed direct charges, special assessments, and Mello-Roos community-facilities-district charges, which are billed per parcel and can add thousands of dollars a year in newer east Dublin developments. 2,273 Dublin parcels (9.4%) carry a $0 net value — mostly common areas and exempt parcels — and pay no ad valorem tax. 135 APNs appear on more than one parcel row (condos/multi-unit), so drill-down is keyed to the individual parcel, not the APN alone.</p>
-  <p><b>Actual bills, one click from every parcel.</b> Selecting a parcel now shows a "View actual tax bill at the county" button. The Alameda County Treasurer-Tax Collector portal does not publish direct links to individual bills — verified Nov 1, 2026: its bill page address carries no parcel identifier (the portal selects the bill from your search session — even the older-style bill addresses with a tracer number in them are ignored, verified the same day) and its search page ignores an APN passed in the web address — so the button copies the parcel's APN and opens the county's official search; choose the Parcel Number tab, paste, pick the suggestion, and use "View Bill" on the summary. The gap this matters for is real: one Tassajara Rd parcel (APN 985-133-5, net assessed $701,148) shows an estimate of $7,011–$8,554 on this map, but its actual 2026-27 county bill is $16,342.56 — a 1.2331% composite rate plus $7,696.72 in fixed charges, mostly CFD No. 2024-1 (Mello-Roos) charges that no assessed-value estimate can see.</p>
+  <p><b>Actual bills, one click from every parcel.</b> Selecting a parcel now shows a "View actual tax bill at the county" button. The Alameda County Treasurer-Tax Collector portal does not publish direct links to individual bills — verified Nov 1, 2026: its bill page address carries no parcel identifier (the portal selects the bill from your search session — even the older-style bill addresses with a tracer number in them are ignored, verified the same day) and its search page ignores an APN passed in the web address — so the button copies the home's street address and opens the county's official search — which opens on its Address tab, so you paste, pick the suggestion for that home, and use "View Bill" on the summary (parcels with no street address on file, like vacant land and common areas, copy their APN for the Parcel Number tab instead). The gap this matters for is real: one Tassajara Rd parcel (APN 985-133-5, net assessed $701,148) shows an estimate of $7,011–$8,554 on this map, but its actual 2026-27 county bill is $16,342.56 — a 1.2331% composite rate plus $7,696.72 in fixed charges, mostly CFD No. 2024-1 (Mello-Roos) charges that no assessed-value estimate can see.</p>
   <p>Sources: <a href="https://services5.arcgis.com/ROBnTHSNjoZ2Wm1P/arcgis/rest/services/Parcels/FeatureServer/0" target="_blank" rel="noopener">Alameda County Parcels (ArcGIS FeatureServer)</a> · <a href="https://propertytax.alamedacountyca.gov/search" target="_blank" rel="noopener">Treasurer-Tax Collector — official property tax search &amp; bills</a> · <a href="https://auditor.alamedacountyca.gov/tax-property-reports/" target="_blank" rel="noopener">Auditor-Controller Property Tax Reports</a> · <a href="https://github.com/Undeterred404/dublin-parcel-tax-map" target="_blank" rel="noopener">Source code &amp; data notes on GitHub</a>. Map data © OpenStreetMap contributors; imagery © Esri.</p>
 </footer>
 
@@ -217,7 +217,7 @@ async function parcelAt(latlng){
       `<div style="font-size:13.5px;line-height:1.5"><b>${addr}</b><br>` +
       `<span style="font-size:16px"><b>Est. annual property tax: ${estRange(p.TotalNetValue)}</b></span><br>` +
       `Net assessed value ${fmt$(p.TotalNetValue)} · APN ${p.APN} · TRA ${fullTra(p)}<br>` +
-      `<a href="${COUNTY_SEARCH}" target="_blank" rel="noopener" onclick="copyApn('${p.APN}')" style="font-weight:700">View actual county tax bill ↗</a> <span style="color:#5b6b7c">(county search — APN copied for you)</span><br>` +
+      (() => { const k = billKey(p); return `<a href="${COUNTY_SEARCH}" target="_blank" rel="noopener" onclick="copyText('${k.value.replace(/'/g, "\\'")}')" style="font-weight:700">View actual county tax bill ↗</a> <span style="color:#5b6b7c">(county search — ${k.kind === "address" ? "home address" : "APN"} copied for you)</span><br>`; })() +
       `<span style="color:#5b6b7c">Full breakdown in the panel ${window.innerWidth > 900 ? "on the right" : "below the map"}. Estimate excludes direct charges &amp; Mello-Roos.</span></div>`
     ).openOn(map);
   }catch(e){
@@ -248,24 +248,48 @@ legend.addTo(map);
 // per-parcel bill URL. The bill page (/view-bill) carries no APN or tracer in
 // its address — the portal picks the bill from the search session — and the
 // search page ignores ?apn= parameters. So the closest honest link is the
-// official search, with the parcel's APN copied to the clipboard on click
-// so the user can paste it straight into the Parcel Number tab.
+// official search, with the home's address copied to the clipboard on click
+// (the county search opens on its Address tab, so the user just pastes,
+// picks the suggestion, and opens the bill). Parcels with no street number
+// on file (vacant land, common areas) fall back to APN search.
 const COUNTY_SEARCH = "https://propertytax.alamedacountyca.gov/search";
-function copyApn(apn){
+function copyText(t){
   try{
-    if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(apn); return; }
+    if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(t); return; }
     const ta = document.createElement("textarea");
-    ta.value = apn; ta.style.position = "fixed"; ta.style.opacity = "0";
+    ta.value = t; ta.style.position = "fixed"; ta.style.opacity = "0";
     document.body.appendChild(ta); ta.select();
     document.execCommand("copy"); document.body.removeChild(ta);
-  }catch(e){ /* clipboard is a convenience only; the APN is shown on screen */ }
+  }catch(e){ /* clipboard is a convenience only; the address/APN is shown on screen */ }
+}
+function copyApn(apn){ copyText(apn); }
+function billKey(p){
+  const addr = (p.SitusAddress || "").trim();
+  if (/^\d+\s/.test(addr)) return {kind:"address", value: addr + (p.SitusUnit ? " Unit " + p.SitusUnit : "")};
+  return {kind:"apn", value: p.APN || ""};
 }
 function billBoxHtml(p){
+  const k = billKey(p);
   const apn = p.APN || "—";
+  if (k.kind === "address"){
+    return `
+  <div class="billbox">
+    <h4>Actual county tax bill — this home</h4>
+    <p class="note" style="margin:0">The real bill — including CFD / Mello-Roos and other fixed charges the estimate above excludes — is issued by the Alameda County Treasurer-Tax Collector. The county has no direct web link to an individual bill: its bill page opens only from a search on their portal. This button copies this home's address and opens that official search:</p>
+    <a class="btn" href="${COUNTY_SEARCH}" target="_blank" rel="noopener" onclick="copyText('${k.value.replace(/'/g, "\\'")}')">View actual tax bill at the county ↗</a>
+    <button class="btn secondary" type="button" onclick="copyText('${k.value.replace(/'/g, "\\'")}');this.textContent='Address copied ✓'">Copy address</button>
+    <ol>
+      <li>The county page opens on the <b>Address</b> tab — paste the address <span class="apnchip">${k.value}</span></li>
+      <li>Pick the matching suggestion, click <b>Search</b></li>
+      <li>On the property summary, click <b>View Bill</b></li>
+    </ol>
+    <p class="note" style="margin:2px 0 0">Prefer the parcel number? This home's APN is <span class="apnchip">${apn}</span> — use the county page's Parcel Number tab.</p>
+  </div>`;
+  }
   return `
   <div class="billbox">
     <h4>Actual county tax bill — this parcel</h4>
-    <p class="note" style="margin:0">The real bill — including CFD / Mello-Roos and other fixed charges the estimate above excludes — is issued by the Alameda County Treasurer-Tax Collector. The county has no direct web link to an individual bill: its bill page opens only from a search on their portal. This button copies the APN and opens that official search:</p>
+    <p class="note" style="margin:0">This parcel has no street address on file (vacant land / common area), so look its bill up by APN. The real bill is issued by the Alameda County Treasurer-Tax Collector, and its bill page opens only from a search on their portal. This button copies the APN and opens that official search:</p>
     <a class="btn" href="${COUNTY_SEARCH}" target="_blank" rel="noopener" onclick="copyApn('${apn}')">View actual tax bill at the county ↗</a>
     <button class="btn secondary" type="button" onclick="copyApn('${apn}');this.textContent='APN copied ✓'">Copy APN</button>
     <ol>
